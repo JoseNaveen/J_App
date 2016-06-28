@@ -1,0 +1,51 @@
+<form class="form-horizontal" onsubmit="SignUpValidate()" role="form" name="signupform" id="signupform">
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="name">Name:</label>
+		      <div class="col-sm-10">
+		        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="email">Email:</label>
+		      <div class="col-sm-10">
+		        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+		      </div>
+		    </div> 
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="pwd">Password:</label>
+		      <div class="col-sm-10">          
+		        <input type="password" class="form-control" name="password" id="pwd" placeholder="Enter password">
+		      </div>
+		    </div>
+		    
+			<div class="form-group">
+		      <label class="control-label col-sm-2" for="re_pwd">Retype Password:</label>
+		      <div class="col-sm-10">          
+		        <input type="password" class="form-control" name="re_password" id="re_pwd" placeholder="Retype password">
+		      </div>
+		    </div>
+
+			<div class="form-group">
+		      <label class="control-label col-sm-2" for="upload">Profile Picture:</label>
+		      <div class="col-sm-10">  
+				<span class="btn btn-default btn-file"><span>Choose file</span>
+				<input type="file" class="" name="profile_picture" placeholder="Upload Picture" id="profile_picture"></span>
+				<span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
+			  
+				</span>
+		      </div>
+		    </div>
+			
+		    <div class="form-group">        
+		      <div class="col-sm-offset-2 col-sm-10">
+		        <div class="checkbox">
+		          <label><input type="checkbox"> Remember me</label>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="form-group">        
+		      <div class="col-sm-offset-2 col-sm-10">
+		        <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#SignUpDone" data-dismiss="modal">Register</button>
+		      </div>
+		    </div>
+		  </form>

@@ -1,0 +1,219 @@
+.navbar-nav > li > a, .navbar-brand {padding-top:5px !important; padding-bottom:0 !important; height:30px;}
+.navbar {font-family: verdana;min-height:30px !important;border-radius: 0px; background-color:#00004d;}
+
+
+.board-container {
+  display:none;
+  position: relative;
+/*   top: 14px; */
+/*   padding-left:15px; */
+}
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover,.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  
+}
+/*.hvr-grow:focus,*/
+
+.btn{
+    padding: 12px 16px;
+    width: 100%;
+    
+    background-color: #ff8832!important;
+    font-family: verdana,arial,sans-serif;
+    transition: all .25s ease;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.24);
+    display: block;
+    border: 0 solid;
+    margin: 1.5em 0;
+    font-size: 12px;
+    
+}
+
+#chessboard {
+/*   border-collapse: collapse; */
+/*   border-spacing: 0; */
+  width: 360px;
+    height: 360px;
+    margin: 10px;
+    border: 5px solid #333;
+}
+
+th {
+  font-family: "Montserrat", sans-serif;
+  \\"Verdana",
+  Geneva,
+  sans-serif;
+}
+
+.bk {
+  float: left;
+    width: 45px;
+    height: 45px;
+    background-color: #999;
+      font-size:30px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    cursor:default;
+}
+
+.selectable.euro {
+  background: blue;
+}
+
+.wt {
+	 float: left;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    font-size:30px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    cursor:default;
+}
+
+.one {
+  background: green;
+}
+
+.two {
+  background: yellow;
+}
+
+.selectable.selected {
+  background: green;
+}
+/**
+.game-selected{
+	background:#0059b3
+}**/
+.game-select {  
+ -webkit-transition: background 0.3s;
+  transition: background;
+  transition-duration: 0.3s;
+}
+.game-select:hover{
+	background: #3399ff
+}
+.game-select:active,.game-select:focus{
+	background: #00b300
+}
+
+.tablerow td {
+/*   width: 2.9em; */
+/*   height: 2.9em; */
+}
+
+.circle_green {
+  background: red;
+}
+
+.drdag {
+  height: auto;
+  width: 95%;
+}
+
+.shadow {
+  box-shadow: 10px 10px 10px #000000;
+  height: 400px;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+}
+
+#logtext {
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+#game_list_table {
+  position: relative;
+  top: 15px;
+  left: -15px;
+}
+
+#load {
+  position: relative;
+  left: 10px;
+}
+.game_list1{
+	top: 10px;
+	left: -14px;
+	position:relative;
+}
+.item_class{
+  top:3px;
+  left:10px;
+  position: relative;
+}
+.item{
+  width:200px;
+  height: 40px;
+  float:left;
+  background: grey;
+}
+.item.selected{
+  background: #00994d;
+}
+
+#inner2,#inner3{
+  clear: left;
+}
+
+
+.hvr-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: #006635;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-reveal:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  border-width: 4px;
+}
+

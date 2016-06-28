@@ -1,0 +1,108 @@
+.frame {
+	
+	width: 600px;
+	height: 600px;
+	float: top;
+}
+.top-bar {
+  background: grey;
+  overflow: hidden;
+  padding: 0px 10px
+}
+
+.top-bar-menu ul li {
+  float: left;
+  list-style: none;
+  font-family: "Calibri";
+}
+
+a {
+  padding: 1px 10px;
+}
+
+header a:hover {
+  color: red;
+  -webkit-transition-delay: 1s;
+  transition-delay: 0.1s;
+}
+
+.header-outer {
+  background: #20262c;
+  overflow: hidden;
+}
+
+.top-bar-elements:hover {
+  color: green;
+}
+
+.menu-links-list ul li {
+  float: left;
+  list-style: none;
+  padding: 5px 10px;
+  color: white;
+  position: relative;
+  font-family: "Calibri";
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner-text {
+  color: white;
+  font-family: "calibri";
+}
+
+.site-menu {
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page-content {
+  display: none;
+}
+#login_form{
+display:none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.bk {
+    background: grey;
+}
+.selectable.euro {
+    background: blue;
+}
+.wt {
+}
+.one {
+    background: green;
+}
+.two {
+    background: yellow;
+}
+.selectable.selected {
+    background: green;
+}
+td {
+    width: 2.7em;
+    height: 2.9em;
+}
+.circle_green {
+    background: red;
+}
+.drdag{
+    
+    height: auto;
+    width: 95%;
+}
+#chessboard{display:none;}
+
+.page-content.active {
+  display: block;
+}
+.left-float{
+  float:bottom;
+}

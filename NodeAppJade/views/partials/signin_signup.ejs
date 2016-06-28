@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<div id="myModal" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" class="close">×</button>
+            <h4 class="modal-title">SignUp</h4>
+          </div>
+          <div class="modal-body">
+            <form id="signupform" name="ajaxform" action="/signin" method="POST">
+              <label id="field1">Username</label>
+              <input id="user" type="text" name="username" value=""><br>
+              <label id="field2">Password</label>
+              <input type="text" name="password" value=""><br>
+              <div id="field3">
+                <label>Email</label>
+                <input type="text" name="email" value=""><br>
+              </div>
+              <input id="sbmt" type="submit" name="Submit" value="Sign Up"><br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="SignUpDone" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" class="close">×</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>

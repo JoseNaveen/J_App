@@ -1,0 +1,11 @@
+doctype html
+html
+  body
+    | hello
+    form(action='http://127.0.0.1:3000/login', method='POST')
+      | Username: 
+      input(type='text', name='username')
+      br
+      | Password: 
+      input(type='password', name='password')
+      input(type='submit', value='Submit')

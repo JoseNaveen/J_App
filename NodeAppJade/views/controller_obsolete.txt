@@ -1,0 +1,116 @@
+/**
+ * http://usejsdoc.org/
+ */
+var currentBrd;
+var fs = require('fs');
+var db = require('./models/db')
+var Game_Table = db.Game_Table_Model
+
+function Game(player1)
+{
+		this.game_id = Math.floor((Math.random() * 10000 ) + 1);
+		this.current_position = '[{"cell":{"clr":"wt","pos":26},"piece":{"type":{"value":5,"name":"brok"},"col":"black","name":"brook1"}},{"cell":{"clr":"bk","pos":27},"piece":{"type":{"value":3,"name":"bknght"},"col":"black","name":"bknght1"}},{"cell":{"clr":"wt","pos":28},"piece":{"type":{"value":4,"name":"bbshp"},"col":"black","name":"bbshp1"}},{"cell":{"clr":"bk","pos":29},"piece":{"type":{"value":8,"name":"bqueen"},"col":"black","name":"bqueen1"}},{"cell":{"clr":"wt","pos":30},"piece":{"type":{"value":15,"name":"bking"},"col":"black","name":"bking1"}},{"cell":{"clr":"bk","pos":31},"piece":{"type":{"value":4,"name":"bbshp"},"col":"black","name":"bbshp2"}},{"cell":{"clr":"wt","pos":32},"piece":{"type":{"value":3,"name":"bknght"},"col":"black","name":"bknght2"}},{"cell":{"clr":"bk","pos":33},"piece":{"type":{"value":5,"name":"brok"},"col":"black","name":"brook2"}},{"cell":{"clr":"bk","pos":38},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn1"}},{"cell":{"clr":"wt","pos":39},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn2"}},{"cell":{"clr":"bk","pos":40},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn3"}},{"cell":{"clr":"wt","pos":41},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn4"}},{"cell":{"clr":"bk","pos":42},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn5"}},{"cell":{"clr":"wt","pos":43},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn6"}},{"cell":{"clr":"bk","pos":44},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn7"}},{"cell":{"clr":"wt","pos":45},"piece":{"type":{"value":1,"name":"bpawn"},"col":"black","name":"bpawn8"}},{"cell":{"clr":"wt","pos":98},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn1"}},{"cell":{"clr":"bk","pos":99},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn2"}},{"cell":{"clr":"wt","pos":100},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn3"}},{"cell":{"clr":"bk","pos":101},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn4"}},{"cell":{"clr":"wt","pos":102},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn5"}},{"cell":{"clr":"bk","pos":103},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn6"}},{"cell":{"clr":"wt","pos":104},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn7"}},{"cell":{"clr":"bk","pos":105},"piece":{"type":{"value":1,"name":"wpawn"},"col":"white","name":"wpawn8"}},{"cell":{"clr":"bk","pos":110},"piece":{"type":{"value":5,"name":"wrook"},"col":"white","name":"wrook1"}},{"cell":{"clr":"wt","pos":111},"piece":{"type":{"value":3,"name":"wknght"},"col":"white","name":"wknght1"}},{"cell":{"clr":"bk","pos":112},"piece":{"type":{"value":4,"name":"wbshp"},"col":"white","name":"wbshp1"}},{"cell":{"clr":"wt","pos":113},"piece":{"type":{"value":8,"name":"wqueen"},"col":"white","name":"wqueen"}},{"cell":{"clr":"bk","pos":114},"piece":{"type":{"value":15,"name":"wking"},"col":"white","name":"wking"}},{"cell":{"clr":"wt","pos":115},"piece":{"type":{"value":4,"name":"wbshp"},"col":"white","name":"wbshp2"}},{"cell":{"clr":"bk","pos":116},"piece":{"type":{"value":3,"name":"wknght"},"col":"white","name":"wknght2"}},{"cell":{"clr":"wt","pos":117},"piece":{"type":{"value":5,"name":"wrook"},"col":"white","name":"wrook2"}}]';
+		this.player1 = player1;
+		this.player2 = undefined;
+		this.created_time = new Date();
+		this.start_time = undefined;
+		this.last_move = undefined;
+		this.turn = undefined;
+		this.time_limit = undefined;
+		this.game_status = 0; //0,started,finished
+		this.result = undefined; //white,black,draw
+		this.moves = [];
+		this.move_num = 0;		
+}
+var game_array = []; //array which stores all the created games
+module.exports = {
+		create_or_fetch_game: function(user){
+			var i = 0;
+			while(game_array[i]){ //if game array is defined
+				if(!game_array[i].game_status){
+					if(game_array[i].player1 != user){
+						return game_array[i];// 
+					}
+				}//return the oldest game with status as undefined
+				else{
+					i++;
+				}
+			}
+			var new_game;
+			new_game = new Game(user)
+			game_array.push(new_game);
+			
+			//new_game = JSON.stringify(new_game)
+			console.log(new_game);
+			game = new Game_Table(new_game)
+			game.save(function(err,game){
+				if(err){
+					console.log("save game failed")
+					return;
+				}
+				console.log("save game Successful")
+			});
+			//console.log(game_array[game_array.length - 1]);
+			return game_array[game_array.length - 1];
+		},
+		get_game_postion: function(id){
+			var i = 0;			
+			//console.log(id,game_array[0])
+			while(1){
+				console.log(i);
+				if(game_array[i].game_id === Number(id)){
+					return game_array[i];
+				};
+				i++;
+			}
+			return 0;
+		},
+		get_game_status: function(id){
+			var i = 0;
+			while(1){
+				if(game_array[i].game_id === Number(id)){
+					return 1;
+				}
+				i++;				
+			}
+		},
+		get_game: function(id){
+			var i = 0;
+			while(game_array[i]){
+				if(game_array[i].game_id === Number(id)){
+					return game_array[i];
+				}
+				i++;				
+			}
+		},
+		save_game: function(id,move_num,current_position,movedata,turn,game_status){
+			//fetch the game using the id and set the following values
+			var i = 0;
+			game_array[0]
+			while(game_array[i]){
+				if(game_array[i].game_id === Number(id)){
+					game_array[i].move_num = move_num;
+					game_array[i].current_position = current_position;
+					game_array[i].moves.push(movedata);
+					game_array[i].turn = turn;
+					game_array[i].last_move = new Date();
+					game_array[i].game_status = game_status;
+					console.log(game_array[i]);
+					fs.writeFile("game_" + id + ".json",JSON.stringify(game_array[i]) + "\n\n")
+					return 1;
+				}
+				i++;
+			}
+		},
+		get_created_game_list: function(user){
+			var i = 0;
+			var game_list = []
+			while(game_array[i]){
+				if(game_array[i].player1 === user || game_array[i].player2 ===user){
+					game_list.push(game_array[i].game_id)
+				}
+				i++;
+			}
+			return game_list;
+		}
+};
