@@ -1,3 +1,5 @@
+C:
+
 rem SHORT CUT TO START MONGODB
 
 cd c:\Program Files (x86)\MongoDB\Server\3.2\bin

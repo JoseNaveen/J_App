@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose readDependencies loading dependencies from D:\J_App\NodeAppJade\package.json
+5 verbose install where, deps [ 'D:\\J_App\\NodeAppJade',
+5 verbose install   [ 'express',
+5 verbose install     'jade',
+5 verbose install     'ejs',
+5 verbose install     'mongodb',
+5 verbose install     'mongoose',
+5 verbose install     'serve-favicon',
+5 verbose install     'debug',
+5 verbose install     'randomstring',
+5 verbose install     'connect-redis' ] ]
+6 verbose install where, peers [ 'D:\\J_App\\NodeAppJade', [] ]
+7 verbose installManyTop reading for lifecycle D:\J_App\NodeAppJade\package.json
+8 info preinstall NodeAppJade@0.0.1
+9 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\chai\package.json
+10 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\debug\package.json
+11 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\ejs\package.json
+12 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\express\package.json
+13 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\jade\package.json
+14 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\mongodb\package.json
+15 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\mongoose\package.json
+16 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\randomstring\package.json
+17 verbose installManyTop reading scoped package data from D:\J_App\NodeAppJade\node_modules\serve-favicon\package.json
+18 info package.json ejs@1.0.0 No license field.
+19 info package.json express@3.2.6 No license field.
+20 verbose readDependencies loading dependencies from D:\J_App\NodeAppJade\package.json
+21 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\chai\package.json
+22 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\debug\package.json
+23 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\ejs\package.json
+24 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\express\package.json
+25 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\jade\package.json
+26 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\mongodb\package.json
+27 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\mongoose\package.json
+28 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\randomstring\package.json
+29 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\serve-favicon\package.json
+30 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\express\package.json
+31 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\express.cmd\package.json
+32 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\jade\package.json
+33 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\jade.cmd\package.json
+34 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\randomstring\package.json
+35 verbose targetResolver reading package data from D:\J_App\NodeAppJade\node_modules\.bin\randomstring.cmd\package.json
+36 verbose already installed skipping express@3.2.6 D:\J_App\NodeAppJade
+37 verbose already installed skipping jade@* D:\J_App\NodeAppJade
+38 verbose already installed skipping ejs@^1.0.0 D:\J_App\NodeAppJade
+39 verbose already installed skipping mongodb@>= 0.9.6-7 D:\J_App\NodeAppJade
+40 verbose already installed skipping mongoose@^4.3.3 D:\J_App\NodeAppJade
+41 verbose already installed skipping serve-favicon@~2.3.0 D:\J_App\NodeAppJade
+42 verbose already installed skipping debug@~2.2.0 D:\J_App\NodeAppJade
+43 verbose already installed skipping randomstring@1.1.3 D:\J_App\NodeAppJade
+44 silly cache add args [ 'connect-redis@3.1.0', null ]
+45 verbose cache add spec connect-redis@3.1.0
+46 silly cache add parsed spec Result {
+46 silly cache add   raw: 'connect-redis@3.1.0',
+46 silly cache add   scope: null,
+46 silly cache add   name: 'connect-redis',
+46 silly cache add   rawSpec: '3.1.0',
+46 silly cache add   spec: '3.1.0',
+46 silly cache add   type: 'version' }
+47 silly addNamed connect-redis@3.1.0
+48 verbose addNamed "3.1.0" is a plain semver version for connect-redis
+49 silly mapToRegistry name connect-redis
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry uri https://registry.npmjs.org/connect-redis
+53 verbose addNameVersion registry:https://registry.npmjs.org/connect-redis not in flight; fetching
+54 verbose request uri https://registry.npmjs.org/connect-redis
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 3:18:20 PM
+57 verbose request id 821d856411b412d6
+58 verbose etag "DMFGYUU76O3J6H7FTKTXBU17S"
+59 http request GET https://registry.npmjs.org/connect-redis
+60 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.47.162:443
+61 info attempt registry request try #2 at 3:18:51 PM
+62 verbose etag "DMFGYUU76O3J6H7FTKTXBU17S"
+63 http request GET https://registry.npmjs.org/connect-redis
+64 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.47.162:443
+65 info attempt registry request try #3 at 3:20:13 PM
+66 verbose etag "DMFGYUU76O3J6H7FTKTXBU17S"
+67 http request GET https://registry.npmjs.org/connect-redis
+68 silly get cb [ 304, undefined ]
+69 verbose etag https://registry.npmjs.org/connect-redis from cache
+70 verbose get saving connect-redis to C:\Users\joalphon\AppData\Roaming\npm-cache\registry.npmjs.org\connect-redis\.cache.json
+71 verbose stack Error: version not found: connect-redis@3.1.0
+71 verbose stack     at setData (C:\Program Files (x86)\nodejs\node_modules\npm\lib\cache\add-named.js:137:12)
+71 verbose stack     at RES (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+71 verbose stack     at f (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\once\once.js:17:25)
+71 verbose stack     at fixName (C:\Program Files (x86)\nodejs\node_modules\npm\lib\cache\add-named.js:29:5)
+71 verbose stack     at saved (C:\Program Files (x86)\nodejs\node_modules\npm\lib\cache\caching-client.js:173:7)
+71 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+71 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+72 verbose statusCode 404
+73 verbose cwd D:\J_App\NodeAppJade
+74 error Windows_NT 6.1.7601
+75 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+76 error node v4.2.3
+77 error npm  v2.14.7
+78 error version not found: connect-redis@3.1.0
+79 error If you need help, you may report this error at:
+79 error     <https://github.com/npm/npm/issues>
+80 verbose exit [ 1, true ]
